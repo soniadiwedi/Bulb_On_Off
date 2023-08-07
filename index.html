@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .image{
+            margin-top: 10%;
+
+            width: 20%;
+            border-radius:40%;
+            margin-left : auto ;
+            margin-right :auto ;
+            display: block;
+            
+        }
+        #btn{
+            margin-left : auto ;
+            margin-right :auto ;
+            margin-top: 10%;
+            padding: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./assets/bulbOff.jpg" alt="" class="image">
+        <button id="btn">Turn On</button>
+    </div>
+</body>
+<script>
+    let btn=document.getElementById("btn")
+    btn.addEventListener("click",()=>{
+        if(btn.textContent.includes("On")){
+            document.querySelector(".image").src="https://cdn.mos.cms.futurecdn.net/HaPnm6P7TZhPQGGUxtDjAg-320-80.jpg";
+            btn.innerHTML=`Turn Off`;
+        }else{
+            
+            document.querySelector(".image").src="./assets/bulbOff.jpg"
+            btn.innerHTML=`Turn On`
+        }
+    })
+</script>
+</html>
